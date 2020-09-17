@@ -1,0 +1,438 @@
+/* CSS Document */
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+
+/* Form cointainer */
+.form-container {
+    padding:0px;
+    margin:0 auto;
+    max-width:850px;
+	padding:20px;
+	border:2px solid #ddd;
+	border-radius:5px;
+	background-color:#fff;
+	-webkit-box-shadow: 1px 1px 10px 0px rgba(97,97,97,0.2);
+	-moz-box-shadow: 1px 1px 10px 0px rgba(97,97,97,0.2);
+	box-shadow: 1px 1px 10px 0px rgba(97,97,97,0.2);
+}
+
+.form-container p,
+.form-container li  
+{
+    font-size:0.9em;
+    line-height:1.4em;
+    color:#4f4d56;
+    text-align:justify; 
+}
+
+/* Subcointainers for diagraming */
+.col-control, 
+.col-control2 
+{
+    padding-left:10px;
+}
+
+.col-5 {
+    float: left;
+    width: 5%;
+    margin-top: 10px;
+}
+
+.col-10 {
+    float: left;
+    width: 10%;
+    margin-top: 10px;
+}
+
+.col-10-100 
+{
+    float: left;
+    width: 10%;
+    margin-top: 10px;     
+}
+
+.col-15 {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.col-20 {
+    float: left;
+    width: 20%;
+    margin-top: 10px;
+}
+
+.col-20-20 {
+    float: left;
+    width: 20%;
+    margin-top: 10px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+
+.col-25a {
+    float: left;
+    width: 25%;
+}
+
+
+.col-25-50 {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.col-30a {
+    float: left;
+    width: 30%;
+}
+
+.col-333 {
+    float: left;
+    
+    width: 33.33333333333%;
+}
+
+.col-35 {
+    float: left;
+    width: 35%;
+    margin-top: 10px;
+}
+
+.col-35-50 {
+    float: left;
+    width: 35%;
+    margin-top: 10px;
+}
+
+.col-40 {
+    float: left;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.col-45a {
+    float: left;
+    width: 40%;
+}
+
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.col-50-50 {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.col-60 {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.col-65 {
+    float: left;
+    width: 65%;
+    margin-top: 10px;
+}
+
+.col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 10px;
+}
+
+.col-80 {
+    float: left;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.col-90 {
+    float: left;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.col-100 {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* titles */
+.form-container h1 
+{
+    margin:10px 0px;
+    font-weight:normal;
+    margin:10px 0px;
+    font-size:1.4em;
+    color:#bddc1c !important;
+}
+
+/* subtitles */
+.form-container h2 {
+    font-weight:normal;
+    margin:10px 0px;
+    font-size:1.4em;
+    color:#d84b4b !important;
+}
+
+/* Customized checkbox */
+.chkbox-container {
+    display:inline-block !important; /* Change to block to display vertical */
+    position: relative !important;
+    padding-left: 35px !important;
+    padding-top:4px !important;
+    margin-bottom: 12px;
+    cursor: pointer;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#888 !important;
+    font-size:0.95em !important;
+}
+
+.chkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.chkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.chkbox-container:hover input ~ .chkbox-checkmark {
+    background-color: #ccc;
+}
+
+.chkbox-container input:checked ~ .chkbox-checkmark {
+    background-color: #918f9a;
+}
+
+.chkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.chkbox-container input:checked ~ .chkbox-checkmark:after {
+    display: block;
+}
+
+.chkbox-container .chkbox-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1em;
+    -webkit-appearance: none;
+    color: #111;
+    background-image: url(../imgs/select-icon.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.form-container select > option {
+    height:30px;
+}
+
+.form-container input[type=date]
+{  
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;  
+    font-size: 0.95em;
+	font-family: 'Roboto', sans-serif;
+    width:auto;
+    min-width:95px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-height: 16px; 
+    color:#111;
+	background-color:#FFF;
+}
+
+.form-container input[type=text], .form-container input[type=email] {
+    width: 100%;
+    padding: 8px;
+    border: 0px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1em;
+    color: #111;
+}
+
+/* Right bar for filters and submenus options */
+.form-container input[type=button] {    
+    background-color: #ffffff;
+    color: #2760b3;
+    font-weight: normal;
+    border: 2px solid #2760b3 !important;
+    cursor: pointer !important;
+    font-size: 0.95em;
+    width: 100%;
+    padding: 4px 5px 6px 5px !important;
+    resize: vertical;
+    box-sizing: border-box;
+    text-align:center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.1);
+	height: 36px !important;
+    line-height: 22px !important;
+}
+
+.form-container input[type=button]:hover { 
+    background-color: #89b3ee !important;
+    color: #fff !important;
+    border: 2px solid #2760b3 !important;
+	transition: .5s ease; 
+}
+
+/* Customized radio button */
+.radio-container {
+    display:inline-block !important;
+    position: relative !important;
+    padding-left: 35px !important;
+    padding-top:4px !important;      
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#000 !important;
+    font-size:0.95em !important;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radio-checkmark {
+      background-color: #ccc;
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+    background-color: #918f9a;
+}
+
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+.radio-container .radio-checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+@media only screen and (max-width:767px) {
+    .col-25,
+    .col-75{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+
+    .col-333,
+    .col-25a,
+    .col-30a,
+    .col-45a
+    {
+        width:100%;
+        float:none;
+    }
+
+    .col-45a{
+        text-align: left;
+    }
+}

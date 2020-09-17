@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/template01.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Buscador Legislativo - Documentos</title>
+<!-- InstanceEndEditable -->
+
+<script type="text/javascript" src="js/buscador-legislativo.js"></script>
+<script type="text/javascript" src="js/sweetalert2.min.js"></script>
+<link href="css/buscador-legislativo.css" rel="stylesheet" type="text/css">
+<link href="css/sweetalert2.min.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+<header>
+    <div class="header">
+      <div class="header-left"><img id="logoBL" src="imgs/logo-bl.png" alt="Buscador Legislativo" title="Buscador Legislativo" style="cursor:pointer; border:none" onclick="javascript:location.href='index.htm'" /></div>
+      <div class="header-right">
+        <span id="spBuscarEn" class="disable-select">Buscar en: </span>
+        <a id="lnk-index" href="index.htm" title="Buscar en todo el sitio web">Todo</a>
+        <a id="lnk-proyecto" href="proyectos.htm" title="Proyectos">Proyectos</a>
+        <a id="lnk-documento" href="documentos.htm" title="Documentos">Documentos</a>
+        <a id="lnk-comision" href="comisiones.htm" title="Comisiones">Comisiones</a>
+        <a id="lnk-legislador" href="legisladores.htm" title="Legisladores">Legisladores</a>
+        <!--
+        <a href="#Newsletter">Newsletter</a>
+        -->
+      </div>  
+    </div>
+</header>
+
+<section>
+    <!-- Buscador -->
+    <div class="autocomplete" style="width:100%">
+      <input id="usrQuery" type="text" name="usrQuery" placeholder="Ingrese su búsqueda ej. financiamiento pymes" />
+    </div>
+    
+    <!-- Busqueda avanzada -->
+    <div id="dv-title">
+        <div id="dv-left"><h1 class="disable-select"><!-- InstanceBeginEditable name="bodytitle" -->Documentos<!-- InstanceEndEditable --></h1></div>
+        <div id="dv-right"><img class="button" id="imgBusquedaAvanzada" src="imgs/ba.svg" alt="Busqueda avanzada" /></div>
+    </div>
+	
+    <!-- Form busqueda avanzada -->
+    <div class="box box-hidden">
+        <div class="form-container">
+        	<div class="row"><h2>Búsqueda avanzada</h2></div>
+            <div class="row">            
+                <div class="col-25">
+                    <label for="tipoProyecto">Tipo de proyecto</label>                                   
+                </div>            
+                <div class="col-25">
+                     <label class="chkbox-container">Legislativo
+                      <input id="proyectoLeg" name="proyectoLeg" value="1" type="checkbox" checked="checked" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>
+                <div class="col-25">
+                     <label class="chkbox-container">Acuerdo
+                      <input id="proyectoAcu" name="proyectoAcu" value="1" type="checkbox" checked="checked" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>     
+                <div class="col-25">
+                     <label class="chkbox-container">Resolución
+                      <input id="proyectoRes" name="proyectoRes" value="1" type="checkbox" checked="checked" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>  
+            </div>
+            
+            <div class="row">            
+                <div class="col-25">
+                    <label for="usrQueryAdv">Palabra o frase</label>                                   
+                </div>
+                <div class="col-75">
+                    <input type="text" name="usrQueryAdv" maxlength="50" />
+                </div>            
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label>Criterio de b&uacute;squeda</label>                
+                </div>
+                <div class="col-25">
+                    <label class="radio-container">Todas las palabras
+                    <input type="radio" id="criterioT" name="criterioT" value="T" checked="checked">
+                    <span class="radio-checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-25">
+                    <label class="radio-container">Algunas palabras
+                    <input type="radio" id="criterioA" name="criterioA" value="A">
+                    <span class="radio-checkmark"></span>
+                    </label> 
+                </div>
+                <div class="col-25">
+                    <label class="radio-container">Frase exacta
+                    <input type="radio" id="criterioE" name="criterioE" value="E">
+                    <span class="radio-checkmark"></span>
+                    </label>                
+                </div>
+            </div>
+            
+            <div class="row">            
+                <div class="col-25">
+                    <label for="k_domain">Tipos de documentos</label>                                   
+                </div>
+                 <div class="col-25">
+                     <label class="chkbox-container">Ley
+                      <input type="checkbox" checked="checked" id="tipoDocLE" name="tipoDocLE" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>
+                <div class="col-25">
+                     <label class="chkbox-container">Decreto supremo
+                      <input type="checkbox" checked="checked" id="tipoDocDS" name="tipoDocDS" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>     
+                <div class="col-25">
+                     <label class="chkbox-container">Informes
+                      <input type="checkbox" checked="checked" id="tipoDocIN" name="tipoDocIN" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>
+            </div>
+            
+            <div class="row"> 
+                <div class="col-25">
+                                                
+                </div>
+                <div class="col-25">
+                     <label class="chkbox-container">Oficios
+                      <input type="checkbox" checked="checked" id="tipoDocOF" name="tipoDocOF" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>
+                <div class="col-25">
+                     <label class="chkbox-container">Normas
+                      <input type="checkbox" checked="checked" id="tipoDocNO" name="tipoDocNO" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>     
+                <div class="col-25">
+                     <label class="chkbox-container">Otros
+                      <input type="checkbox" checked="checked" id="tipoDocOT" name="tipoDocOT" value="1" />
+                      <span class="chkbox-checkmark"></span>
+                    </label>   
+                </div>           
+            </div>
+            
+             <div class="row">            
+                <div class="col-25">
+                    <label for="materia">Materia de inter&eacute;s</label>                                   
+                </div>
+                <div class="col-75">
+                    <select name="materia" id="materia">
+                        <option> - - Seleccione una opción - - - </option>
+                    </select>
+                </div>            
+            </div>
+            
+            <div class="row"> 
+                <div class="col-25">
+                    <label for="fechaPubDesde">Publicaci&oacute;n desde</label>                            
+                </div>
+                <div class="col-25">
+                     <input type="date" id="fechaPubDesde" name="fechaPubDesde" />
+                </div>
+                <div class="col-25">
+                     <label for="fechaPubHasta">hasta</label>  
+                </div>     
+                <div class="col-25">
+                     <input type="date" id="fechaPubHasta" name="fechaPubHasta" />
+                </div>           
+            </div>
+            
+            <div class="row"> 
+                <div class="col-25"></div>
+                <div class="col-75">
+                     <input type="button" value="BUSCAR" style="background-color:#255bab; color:#FFF; font-size:1.2em" onclick="javascript:Buscar()" />
+                </div>                       
+            </div>
+            
+        </div>        
+   	</div>
+    
+    <!--Contenido--> 
+    <!-- InstanceBeginEditable name="body" -->
+	<!-- InstanceEndEditable -->       
+</section>
+
+<footer>
+    <div id="BarraFooter"><a href="https://www.usach.cl/lugares/departamento-ingenieria-informatica" target="_blank">USACH DII</a> - Proyecto de laboratorio Búsqueda y Recuperación de Información 2020</div>
+</footer>
+
+<script type="text/javascript" src="js/autocomplete.js"></script>
+<script type="text/javascript">IniciarInterfaz();</script>
+<!-- InstanceBeginEditable name="endscript" -->
+<!-- InstanceEndEditable -->
+</body><!-- InstanceEnd -->
