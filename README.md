@@ -12,5 +12,6 @@ El proyecto consta de 2 carpetas:
 
 Desarrollado por:
 * Camila Marín González
-* Héctor Rojas Pescio
 * Francisco Parra Ortiz
+* Héctor Rojas Pescio
+
