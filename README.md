@@ -1,5 +1,5 @@
 # README
-Código correspondiente al proyecto de laboratorio del ramo Búsqueda y Recuperación de información de la Universidad de Santiago.
+Código correspondiente al proyecto de laboratorio del ramo Búsqueda y Recuperación de información en el programa del Doctorado en Ingeniería Informática de la Universidad de Santiago de Chile.
 
 El proyecto consta de 2 carpetas:
 1. **Fuentes de información**
